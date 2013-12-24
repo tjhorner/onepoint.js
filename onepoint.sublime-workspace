@@ -3,6 +3,10 @@
 	{
 		"selected_items":
 		[
+			[
+				"body",
+				"BODY	Tag"
+			]
 		]
 	},
 	"buffers":
@@ -11,16 +15,24 @@
 			"file": "onepoint.js",
 			"settings":
 			{
-				"buffer_size": 1552,
+				"buffer_size": 1563,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/Batch File/Batch File.tmLanguage",
+			"file": "/C/wamp2/www/blog/index.php",
 			"settings":
 			{
-				"buffer_size": 4421,
-				"line_ending": "Unix"
+				"buffer_size": 268,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp2/www/blog/login.php",
+			"settings":
+			{
+				"buffer_size": 277,
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -32,13 +44,18 @@
 			}
 		},
 		{
-			"contents": "// onepoint.js - plugin example - drawing\nonepoint.drawing = Plugin({\n	\"name\": \"Drawing\",\n	\"description\": \"Drawing plugin for OnePoint\",\n	\"author\": \"GeekyGamer14\",\n	\"debug\": false,\n	\"create\": createDrawing,\n	\"color\": \"black\",\n	\"bgcolor\": setBgColor,\n	\"version\": \"1.0\",\n	\"getImage\": getImage});\n\nfunction setBgColor(clr, ele){\n	$(document.getElementById(ele)).css('background-color', clr);\n	$('#messages').append('<br/>background color changed to ' + clr);\n}\n	\nfunction createDrawing(element){\n	if(document.getElementById(element) != null){\n		createDrawListener(element);\n		$(document.getElementById(element)).after('<br/>Brush colors:<br/><span class=\"colorpick black\" onclick=\"onepoint.drawing.color = \\'black\\'\"></span><span class=\"colorpick blue\" onclick=\"onepoint.drawing.color = \\'blue\\'\"></span><span class=\"colorpick red\" onclick=\"onepoint.drawing.color = \\'red\\'\"></span><span class=\"colorpick green\" onclick=\"onepoint.drawing.color = \\'green\\'\"></span><br/>Background colors:<br/><span class=\"colorpick white\" onclick=\"onepoint.drawing.bgcolor(\\'white\\', \\'testCanvas\\')\"></span><span class=\"colorpick blue\" onclick=\"onepoint.drawing.bgcolor(\\'blue\\', \\'testCanvas\\')\"></span><span class=\"colorpick red\" onclick=\"onepoint.drawing.bgcolor(\\'red\\', \\'testCanvas\\')\"></span><span class=\"colorpick green\" onclick=\"onepoint.drawing.bgcolor(\\'green\\', \\'testCanvas\\')\"></span>');\n		onepoint.write(onepoint.getPlugin\"[Drawing] created drawing for id \" + element);\n		return true;\n	}else{\n		console.warn('[onepoint.js] could not create drawing for id ' + element);\n		return false;\n	}\n}\nvar started = false;\nfunction createDrawListener(element){\n	$(document.getElementById(element)).mousedown(function(){\n		$(document.getElementById(element)).mousemove(function(ev) {\n			var pickedCanvas = document.getElementById(element);\n			var context = pickedCanvas.getContext('2d');\n			var x, y;\n			// Mouse position\n			if (ev.layerX || ev.layerX == 0){ // Firefox\n				x = ev.layerX;\n				y = ev.layerY;\n			}else if(ev.offsetX || ev.offsetX == 0){ // Opera fix\n				x = ev.offsetX;\n				y = ev.offsetY;\n			}\n			 // The event handler works like a drawing pencil which tracks the mouse \n			 // movements. We start drawing a path made up of lines.\n			if(!started){\n				// Choose color, based on variable.\n				context.strokeStyle = onepoint.drawing.color;\n				context.beginPath();\n				context.moveTo(x, y);\n				started = true;\n			}else{\n				context.lineTo(x, y);\n				context.stroke();\n			}\n			$('#' + element + 'Download').attr('href', onepoint.drawing.getImage(element));\n			// For debugging purposes only. If you want\n			// to view coordinates, set onepoint.drawing.debug to true.\n			var msg = x + \", \" + y;\n			if(onepoint.drawing.debug == true){\n				$(\"#coords\").text(msg);\n			}\n			// End debugging\n		});\n	});\n	$(document.getElementById(element)).mouseup(function(){\n		$(this).off('mousemove');\n		started = false;\n	});\n	$(document.getElementById(element)).mouseout(function(){\n		$(this).off('mousemove');\n		started = false;\n	});\n	var pickedCanvas = document.getElementById(element);\n	var context = pickedCanvas.getContext('2d');\n	context.font = \"12px Consolas\";\n	context.fillText('Draw:',5,15);\n}\n\nfunction getImage(el){\n	var canvas = document.getElementById(el);\n	var img = canvas.toDataURL(\"image/png\");\n	return img;\n}",
 			"file": "plugins/drawing.js",
-			"file_size": 3370,
-			"file_write_time": 130323369690904000,
 			"settings":
 			{
-				"buffer_size": 3304,
+				"buffer_size": 3314,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/commands/mysql.bat",
+			"settings":
+			{
+				"buffer_size": 106,
 				"line_ending": "Windows"
 			}
 		}
@@ -46,9 +63,17 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 81.0,
+		"height": 334.0,
 		"selected_items":
 		[
+			[
+				"Snippet: ",
+				"Snippet: for (…) {…}"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"sslisp",
 				"Set Syntax: Lisp"
@@ -74,10 +99,6 @@
 				"Set Syntax: XML"
 			],
 			[
-				"ssjs",
-				"Set Syntax: JavaScript"
-			],
-			[
 				"",
 				"Set Syntax: Lisp"
 			],
@@ -86,7 +107,7 @@
 				"Set Syntax: YAML"
 			]
 		],
-		"width": 392.0
+		"width": 416.0
 	},
 	"console":
 	{
@@ -103,6 +124,9 @@
 	},
 	"file_history":
 	[
+		"/C/wamp2/www/onepoint.js/test.js",
+		"/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/Batch File/Batch File.tmLanguage",
+		"/C/wamp2/www/onepoint.js/onepoint.sublime-project",
 		"/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/ShellScript/elif-..-(elif).sublime-snippet",
 		"/C/Users/Rowen/Desktop/cred.txt",
 		"/C/Users/Rowen/Documents/GitHub/magic/magic.js",
@@ -125,6 +149,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"db_con",
+			"BODY",
+			" +",
+			"Background",
+			"background",
 			"true",
 			"obj",
 			"console.log('[onepoint.js] Loading onepoint.js...');\nonepoint = [\"Use onepoint.plugins to view plugins\"];\n\nonepoint.plugins = [];\n\n// get plugin by name, we load first this because\n// we are going to use it in the Plugin() function\nonepoint.getPlugin = function(p){\n	for (var i = 0; i < onepoint.plugins.length; i++) {\n	if (onepoint.plugins[i].name === p) {\n			return onepoint.plugins[i];\n		}\n	}\n	throw \"Couldn't find object with id: \" + id;\n}\n\nonepoint.pluginExists = function(p){\n	for (var i = 0; i < onepoint.plugins.length; i++) {\n	if (onepoint.plugins[i].name === p) {\n			return true;\n		}\n	}\n	return false;\n}\n\nfunction Plugin(obj){\n	if(onepoint.pluginExists(obj.name) == true){\n		return \"Plugin already exists.\";\n	}\n	this.name = obj.name;\n	this.desc = obj.description;\n	this.version = obj.version;\n	this.author = obj.author;\n	var pluginInfo = {\n		\"name\": this.name,\n		\"description\": this.desc,\n		\"author\": this.author,\n		\"version\": this.version,\n		__proto__: null,\n	}\n	onepoint.plugins.push(pluginInfo);\n	console.log('[onepoint.js] Plugin \"' + this.name + '\" v' + this.version + ' by ' + this.author + ' loaded.');\n	return obj;\n}\n\n// write as a plugin\nonepoint.write = function(pl, msg, lvl){\n	lvl = lvl || 'msg';\n	if(lvl == 'msg'){\n		console.log('[' + pl.name + '] ' + msg);\n		return true;\n	}\n	if(lvl == 'warning'){\n		console.warn('[' + pl.name + '] ' + msg);\n		return true;\n	}\n	if(lvl == 'err'){\n		console.error('[' + pl.name + '] ' + msg);\n		return true;\n	}\n}\n\nconsole.log('[onepoint.js] onepoint.js loaded');",
@@ -134,7 +163,7 @@
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
 		],
@@ -147,7 +176,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -155,15 +184,15 @@
 					"file": "onepoint.js",
 					"settings":
 					{
-						"buffer_size": 1552,
+						"buffer_size": 1563,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								169,
-								169
+								616,
+								616
 							]
 						],
 						"settings":
@@ -172,41 +201,65 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/Batch File/Batch File.tmLanguage",
+					"file": "/C/wamp2/www/blog/index.php",
 					"settings":
 					{
-						"buffer_size": 4421,
+						"buffer_size": 268,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3527,
-								3527
+								0,
+								268
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/XML/XML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 1080.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
+					"file": "/C/wamp2/www/blog/login.php",
+					"settings":
+					{
+						"buffer_size": 277,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								176
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "plugins/noparse.js",
 					"settings":
 					{
@@ -217,8 +270,8 @@
 						"selection":
 						[
 							[
-								193,
-								42
+								562,
+								562
 							]
 						],
 						"settings":
@@ -233,25 +286,51 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"file": "plugins/drawing.js",
 					"settings":
 					{
-						"buffer_size": 3304,
+						"buffer_size": 3314,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1418,
-								1418
+								2417,
+								2417
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/C/commands/mysql.bat",
+					"settings":
+					{
+						"buffer_size": 106,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								106,
+								106
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Batch File/Batch File.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -321,7 +400,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_visible": false,
+	"side_bar_width": 144.0,
 	"status_bar_visible": true
 }

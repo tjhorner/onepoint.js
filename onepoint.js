@@ -1,4 +1,3 @@
-console.log('[onepoint.js] Loading onepoint.js...');
 onepoint = ["Use onepoint.plugins to view plugins"];
 
 onepoint.plugins = [];
@@ -9,13 +8,13 @@ onepoint.base = {
 		version: "1"
 	};
 
-onepoint.getPlugin = function(p){
+onepoint.getPluginByName = function(p){
 	for (var i = 0; i < onepoint.plugins.length; i++) {
 	if (onepoint.plugins[i].name === p) {
 			return onepoint.plugins[i];
 		}
 	}
-	throw 'Can\'t find plugn called ' + p;
+	throw 'Can\'t find plugin called ' + p;
 }
 
 onepoint.pluginExists = function(p){
