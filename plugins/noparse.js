@@ -12,9 +12,10 @@ $(document).ready(function(){
 });
 
 function checkNoParse(){
+	var np = onepoint.noparse;
 	$('noparse').each(function(){
 		if($(this).attr('unparseified') != 'true'){
-			console.warn('[onepoint.js][Noparse] found an un-unparsified <noparse> tag');
+			onepoint.write(np, 'found an un-unparsified <noparse> tag', 'warning');
 			$(this).text($(this).html());
 			$(this).attr('unparseified', 'true');
 		}
