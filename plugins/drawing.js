@@ -19,10 +19,10 @@ function createDrawing(element){
 	if(document.getElementById(element) != null){
 		createDrawListener(element);
 		$(document.getElementById(element)).after('<br/>Brush colors:<br/><span class="colorpick black" onclick="onepoint.drawing.color = \'black\'"></span><span class="colorpick blue" onclick="onepoint.drawing.color = \'blue\'"></span><span class="colorpick red" onclick="onepoint.drawing.color = \'red\'"></span><span class="colorpick green" onclick="onepoint.drawing.color = \'green\'"></span><br/>Background colors:<br/><span class="colorpick white" onclick="onepoint.drawing.bgcolor(\'white\', \'testCanvas\')"></span><span class="colorpick blue" onclick="onepoint.drawing.bgcolor(\'blue\', \'testCanvas\')"></span><span class="colorpick red" onclick="onepoint.drawing.bgcolor(\'red\', \'testCanvas\')"></span><span class="colorpick green" onclick="onepoint.drawing.bgcolor(\'green\', \'testCanvas\')"></span>');
-		console.log("[onepoint.js][Drawing] created drawing for id " + element);
+		//onepoint.write(onepoint.getPlugin('Drawing'), "created drawing for id " + element, msg);
 		return true;
 	}else{
-		console.warn('[onepoint.js][Drawing] could not create drawing for id ' + element);
+		console.warn('[onepoint.js] could not create drawing for id ' + element);
 		return false;
 	}
 }

@@ -3,15 +3,19 @@ onepoint = ["Use onepoint.plugins to view plugins"];
 
 onepoint.plugins = [];
 
-// get plugin by name, we load first this because
-// we are going to use it in the Plugin() function
+onepoint.base = {
+		name: "onepoint.js",
+		author: "GeekyGamer14",
+		version: "1"
+	};
+
 onepoint.getPlugin = function(p){
 	for (var i = 0; i < onepoint.plugins.length; i++) {
 	if (onepoint.plugins[i].name === p) {
 			return onepoint.plugins[i];
 		}
 	}
-	throw "Couldn't find object with id: " + id;
+	throw 'Can\'t find plugn called ' + p;
 }
 
 onepoint.pluginExists = function(p){
@@ -39,15 +43,15 @@ function Plugin(obj){
 		__proto__: null,
 	}
 	onepoint.plugins.push(pluginInfo);
-	console.log('[onepoint.js] Plugin "' + this.name + '" v' + this.version + ' by ' + this.author + ' loaded.');
+	console.log('Plugin "' + this.name + '" v' + this.version + ' by ' + this.author + ' loaded.');
 	return obj;
 }
 
-// write as a plugin
+// write to console as a plugin
 onepoint.write = function(pl, msg, lvl){
 	lvl = lvl || 'msg';
 	if(lvl == 'msg'){
-		console.log('[' + pl.name + '] ' + msg);
+		console.debug('[' + pl.name + '] ' + msg);
 		return true;
 	}
 	if(lvl == 'warning'){
@@ -59,5 +63,6 @@ onepoint.write = function(pl, msg, lvl){
 		return true;
 	}
 }
+console.log = function(msg){onepoint.write(onepoint.base, msg);};
 
 console.log('[onepoint.js] onepoint.js loaded');
