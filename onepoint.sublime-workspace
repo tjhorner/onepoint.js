@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"Y",
+				"YOU"
+			],
+			[
 				"body",
 				"BODY	Tag"
 			]
@@ -15,23 +19,18 @@
 			"file": "onepoint.js",
 			"settings":
 			{
-				"buffer_size": 1563,
+				"buffer_size": 1625,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/C/wamp2/www/blog/index.php",
+			"contents": "How to create a plugin\n--\n// TODO create this file\n```javascript\nNO IT DESNT\n```",
+			"file": "plugins/how_to_create_plugins.md",
+			"file_size": 62,
+			"file_write_time": 130323989215354000,
 			"settings":
 			{
-				"buffer_size": 268,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/wamp2/www/blog/login.php",
-			"settings":
-			{
-				"buffer_size": 277,
+				"buffer_size": 80,
 				"line_ending": "Windows"
 			}
 		},
@@ -48,14 +47,6 @@
 			"settings":
 			{
 				"buffer_size": 3314,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/commands/mysql.bat",
-			"settings":
-			{
-				"buffer_size": 106,
 				"line_ending": "Windows"
 			}
 		}
@@ -124,13 +115,21 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Pristine Packages/Markdown.sublime-package",
+		"/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/commands/mysql.bat",
+		"/C/wamp2/www/blog/login.php",
+		"/C/wamp2/www/blog/index.php",
+		"/C/wamp2/www/chromecast/index.php",
+		"/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/User/Markdown.sublime-settings",
 		"/C/wamp2/www/onepoint.js/test.js",
 		"/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/Batch File/Batch File.tmLanguage",
 		"/C/wamp2/www/onepoint.js/onepoint.sublime-project",
 		"/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/ShellScript/elif-..-(elif).sublime-snippet",
 		"/C/Users/Rowen/Desktop/cred.txt",
 		"/C/Users/Rowen/Documents/GitHub/magic/magic.js",
-		"/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
 		"/C/Users/Rowen/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings"
 	],
 	"find":
@@ -149,6 +148,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"name",
 			"db_con",
 			"BODY",
 			" +",
@@ -184,15 +184,15 @@
 					"file": "onepoint.js",
 					"settings":
 					{
-						"buffer_size": 1563,
+						"buffer_size": 1625,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								616,
-								616
+								241,
+								241
 							]
 						],
 						"settings":
@@ -201,30 +201,30 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 270.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "/C/wamp2/www/blog/index.php",
+					"file": "plugins/how_to_create_plugins.md",
 					"settings":
 					{
-						"buffer_size": 268,
+						"buffer_size": 80,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								268
+								76,
+								76
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -234,32 +234,6 @@
 				},
 				{
 					"buffer": 2,
-					"file": "/C/wamp2/www/blog/login.php",
-					"settings":
-					{
-						"buffer_size": 277,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								176,
-								176
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "plugins/noparse.js",
 					"settings":
 					{
@@ -270,8 +244,8 @@
 						"selection":
 						[
 							[
-								562,
-								562
+								193,
+								193
 							]
 						],
 						"settings":
@@ -286,7 +260,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 3,
 					"file": "plugins/drawing.js",
 					"settings":
 					{
@@ -308,32 +282,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 405.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/C/commands/mysql.bat",
-					"settings":
-					{
-						"buffer_size": 106,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								106,
-								106
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Batch File/Batch File.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

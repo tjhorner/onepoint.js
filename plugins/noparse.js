@@ -1,10 +1,10 @@
 // onepoint.js - plugin example - noparse
 onepoint.noparse = Plugin({
-	"name": "Noparse",
-	"description": "Noparse tag",
-	"author": "GeekyGamer14",
-	"check": checkNoParse,
-	"version": "1.0",});
+	name: "Noparse",
+	description: "Noparse tag",
+	author: "GeekyGamer14",
+	check: checkNoParse,
+	version: "1.0",});
 
 $(document).ready(function(){
 	checkNoParse();

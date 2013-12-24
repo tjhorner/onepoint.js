@@ -1,14 +1,14 @@
 // onepoint.js - plugin example - drawing
 onepoint.drawing = Plugin({
-	"name": "Drawing",
-	"description": "Drawing plugin for OnePoint",
-	"author": "GeekyGamer14",
-	"debug": false,
-	"create": createDrawing,
-	"color": "black",
-	"bgcolor": setBgColor,
-	"version": "1.0",
-	"getImage": getImage});
+	name: "Drawing",
+	description: "Drawing plugin for OnePoint",
+	author: "GeekyGamer14",
+	debug: false,
+	create: createDrawing,
+	color: "black",
+	bgcolor: setBgColor,
+	version: "1.0",
+	getimage: getImage});
 
 function setBgColor(clr, ele){
 	$(document.getElementById(ele)).css('background-color', clr);

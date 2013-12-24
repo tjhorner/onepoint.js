@@ -29,6 +29,10 @@ onepoint.pluginExists = function(p){
 	return false;
 }
 
+onepoint.unloadPlugin = function(p){
+
+}
+
 function Plugin(obj){
 	if(onepoint.pluginExists(obj.name) == true){
 		return "Plugin already exists.";
