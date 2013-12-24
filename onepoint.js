@@ -2,11 +2,14 @@ onepoint = ["Use onepoint.plugins to view plugins"];
 
 onepoint.plugins = [];
 
+// DON'T EDIT THIS SHIT OR I WILL KILL YOU
 onepoint.base = {
 		name: "onepoint.js",
 		author: "GeekyGamer14",
+		description: "onepoint.js base",
 		version: "1"
 	};
+// okie u can edit below here
 
 onepoint.getPluginByName = function(p){
 	for (var i = 0; i < onepoint.plugins.length; i++) {
