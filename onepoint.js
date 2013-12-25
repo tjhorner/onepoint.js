@@ -29,9 +29,12 @@ onepoint.pluginExists = function(p){
 	return false;
 }
 
-onepoint.unloadPlugin = function(p){
-
-}
+// The whole thing breaks if we do this.
+/*onepoint.unloadPlugin = function(p){
+	var index = onepoint.plugins.indexOf(onepoint.getPluginByName(p));
+	delete onepoint.plugins[index];
+	return "Unloaded " + p;
+}*/
 
 function Plugin(obj){
 	if(onepoint.pluginExists(obj.name) == true){
@@ -41,16 +44,26 @@ function Plugin(obj){
 	this.desc = obj.description;
 	this.version = obj.version;
 	this.author = obj.author;
+	if(!obj.help){
+		obj.help = "No help provided.";
+	}
+	this.help = obj.help;
 	var pluginInfo = {
 		"name": this.name,
 		"description": this.desc,
 		"author": this.author,
 		"version": this.version,
+		"help": this.help,
 		__proto__: null,
 	}
 	onepoint.plugins.push(pluginInfo);
 	console.log('Plugin "' + this.name + '" v' + this.version + ' by ' + this.author + ' loaded.');
 	return obj;
+}
+
+onepoint.help = function(pl){
+	var plugin = onepoint.getPluginByName(pl);
+	return plugin.help;
 }
 
 // write to console as a plugin

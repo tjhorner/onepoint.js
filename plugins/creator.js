@@ -1,3 +1,4 @@
+//simple plugin creator, nothing much.
 onepoint.creator = Plugin({
 	name: "Plugin Creator",
 	author: "GeekyGamer14",

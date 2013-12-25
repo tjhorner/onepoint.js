@@ -8,7 +8,7 @@ onepoint.drawing = Plugin({
 	color: "black",
 	bgcolor: setBgColor,
 	version: "1.0",
-	getimage: getImage});
+	getImage: getImage});
 
 function setBgColor(clr, ele){
 	$(document.getElementById(ele)).css('background-color', clr);
