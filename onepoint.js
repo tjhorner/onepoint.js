@@ -61,6 +61,7 @@ function Plugin(obj){
 	return obj;
 }
 
+// got help?
 onepoint.help = function(pl){
 	var plugin = onepoint.getPluginByName(pl);
 	return plugin.help;
