@@ -1,0 +1,47 @@
+@import url(http://fonts.googleapis.com/css?family=Cedarville+Cursive|Actor);
+
+canvas{
+	cursor: crosshair;
+	border: 1px solid black;
+}
+
+#debug{
+	width: 300px;
+	border: 1px solid gray;
+	text-align: left;
+}
+
+.colorpick{
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	border: 1px solid black;
+	background-color: black;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.colorpick.blue{
+	background-color: blue;
+}
+
+.colorpick.red{
+	background-color: red;
+}
+
+.colorpick.green{
+	background-color: green;
+}
+
+.colorpick.white{
+	background-color: white;
+}
+
+h1, h2, h3, h4{
+	font-family: "Cedarville Cursive";
+	color: LightBlue;
+}
+
+*{
+	font-family: "Actor";
+}
