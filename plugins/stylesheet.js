@@ -16,6 +16,12 @@ onepoint.stylesheet.check = function(){
 			onepoint.write(ss, 'Loaded stylesheet from ' + $(this).attr('sheet'));
 		}
 	});
+	
+	$('style').each(function(){
+		if($(this).attr('src') !== undefined){
+			$(this).html('<link href="' + $(this).attr('sheet') + '" rel="stylesheet" type="text/css"></link>');
+		}
+	})
 }
 onepoint.stylesheet.check();
 $(document).ready(function(){
