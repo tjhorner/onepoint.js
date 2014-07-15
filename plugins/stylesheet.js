@@ -20,6 +20,7 @@ onepoint.stylesheet.check = function(){
 	$('style').each(function(){
 		if($(this).attr('src') !== undefined){
 			$(this).html('<link href="' + $(this).attr('sheet') + '" rel="stylesheet" type="text/css"></link>');
+			onepoint.write(ss, 'Loaded stylesheet from ' + $(this).attr('sheet'));
 		}
 	})
 }
