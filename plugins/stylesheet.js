@@ -18,9 +18,12 @@ onepoint.stylesheet.check = function(){
 	});
 	
 	$('style').each(function(){
-		if($(this).attr('src') !== undefined){
-			$(this).html('<link href="' + $(this).attr('sheet') + '" rel="stylesheet" type="text/css"></link>');
-			onepoint.write(ss, 'Loaded stylesheet from ' + $(this).attr('sheet'));
+		if($(this).attr('styled') !== 'true'){
+			if($(this).attr('src') !== undefined){
+				$(this).html('<link href="' + $(this).attr('src') + '" rel="stylesheet" type="text/css"></link>');
+				$(this).attr('styled', 'true');
+				onepoint.write(ss, 'Loaded stylesheet from ' + $(this).attr('src'));
+			}
 		}
 	})
 }
